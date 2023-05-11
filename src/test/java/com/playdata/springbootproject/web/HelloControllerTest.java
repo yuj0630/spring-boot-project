@@ -1,5 +1,6 @@
-package com.playdata.springbootproject;
+package com.playdata.springbootproject.web;
 
+import com.playdata.springbootproject.HelloController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

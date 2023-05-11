@@ -1,0 +1,20 @@
+body {
+    background-image: url('your-background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.user-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.my-posts .card {
+    margin-bottom: 20px;
+}

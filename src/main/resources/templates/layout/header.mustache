@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain-Dew</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script src="https://kit.fontawesome.com/fb139b7f2d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <!-- 메뉴 구성시 nav 사용 왼쪽 메뉴, 오른쪽 메뉴 만들 떄. left-menu, right-menu -->
+    <nav>
+        <div class="left-menu">
+            <ul>
+                <li><a href="/"><i class="fa-solid fa-mountain-sun">&nbsp Moutain Dew</i></li>
+            </ul>
+        </div>
+        <div class="right-menu">
+            <ul>
+                <li><a href="/oauth2/authorization/google"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="/sign"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="option">
+        <div >
+            <ul>
+                <li><a href="/search">등산로 찾기</a></li>
+                <li><a href="/post">블로그</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/MyPage">My Page</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="search">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+                    <script>
+                        function search() {
+                          const searchBox = document.getElementById("Search");
+                          const searchQuery = Search.value;
+                          window.location.href = `http://192.168.0.193:8000/map/?search=${searchQuery}`;
+                        }
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+

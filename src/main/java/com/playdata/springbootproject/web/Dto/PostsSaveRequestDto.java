@@ -1,7 +1,6 @@
 package com.playdata.springbootproject.web.Dto;
 
-import com.playdata.springbootproject.domain.Posts;
-import jakarta.persistence.Column;
+import com.playdata.springbootproject.domain.post.Posts;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

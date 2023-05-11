@@ -1,11 +1,10 @@
 package com.playdata.springbootproject.web;
 
-import com.playdata.springbootproject.domain.Posts;
-import com.playdata.springbootproject.domain.PostsRepository;
+import com.playdata.springbootproject.domain.post.Posts;
+import com.playdata.springbootproject.domain.post.PostsRepository;
 import com.playdata.springbootproject.web.Dto.PostsSaveRequestDto;
 
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
