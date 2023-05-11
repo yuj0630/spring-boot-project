@@ -2,7 +2,6 @@ package com.playdata.springbootproject.web;
 
 import com.playdata.springbootproject.config.auth.SessionUser;
 import com.playdata.springbootproject.service.PostsService;
-import com.playdata.springbootproject.web.Dto.PostsListResponseDto;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -71,5 +70,24 @@ public class IndexController {
         return "news";
     }
 
+    @GetMapping("/MyPage/Setting")
+    public String MyPageSetting() {
+        return "MyPage-Setting";
+    }
+
+    @GetMapping("/MyPage/QA")
+    public String MyPageQA() {
+        return "MyPage-QA";
+    }
+
+    @GetMapping("/MyPage/Delete")
+    public String MyPageDelete() {
+        return "MyPage-Delete";
+    }
+
+    @GetMapping("/MyPage/update")
+    public String MyPageupdate() {
+        return "MyPage-update";
+    }
 
 }

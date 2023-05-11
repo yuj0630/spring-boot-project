@@ -2,9 +2,20 @@
 <html lang="ko">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* 원하는 글꼴로 변경 */
+            font-size: 16px; /* 원하는 글꼴 크기로 변경 */
+        }
+
+        h2 {
+            font-family: 'Arial', sans-serif; /* 원하는 글꼴로 변경 */
+            font-size: 24px; /* 원하는 글꼴 크기로 변경 */
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mountain-Dew</title>
+    <title>Mountain-Duo</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <script src="https://kit.fontawesome.com/fb139b7f2d.js" crossorigin="anonymous"></script>
 </head>
@@ -14,12 +25,23 @@
     <nav>
         <div class="left-menu">
             <ul>
-                <li><a href="/"><i class="fa-solid fa-mountain-sun">&nbsp Moutain Dew</i></li>
+                <li><a href="/"><i class="fa-solid fa-mountain-sun">&nbsp Moutain Duo</i></li>
             </ul>
         </div>
         <div class="right-menu">
             <ul>
-                <li><a href="/oauth2/authorization/google"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                {{#userName}}
+                    <div class="text-center">
+                        Logged in as: <span id="user">{{userName}}</span>
+                        <a href="/logout" class="btn btn-info active" role="button">로그아웃</a>
+                    </div>
+                {{/userName}}
+                {{^userName}}
+                    <div class="text-center">
+                        <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">로그인</a>
+                    </div>
+                {{/userName}}
+                <li><a href="/index"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                 <li><a href="/sign"><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </div>
@@ -38,12 +60,12 @@
         <div class="col-6">
             <div class="search">
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+                    <input class="form-control mr-sm-2" type="text" id="search-box" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="search()">검색</button>
                     <script>
                         function search() {
                           const searchBox = document.getElementById("Search");
-                          const searchQuery = Search.value;
+                          const searchQuery = searchBox.value;
                           window.location.href = `http://192.168.0.193:8000/map/?search=${searchQuery}`;
                         }
                     </script>
@@ -52,6 +74,3 @@
         </div>
     </div>
 </header>
-
-
-
