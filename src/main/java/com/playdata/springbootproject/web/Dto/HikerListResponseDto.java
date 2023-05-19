@@ -8,7 +8,7 @@ import lombok.Getter;
 @Getter
 public class HikerListResponseDto {
     private String id;
-    private String password;
+    private String pw;
     private String firstName;
     private String lastName;
     private String SSN;
@@ -17,7 +17,7 @@ public class HikerListResponseDto {
     private String phone;
     public HikerListResponseDto(Hiker entity) {
         this.id = entity.getId();
-        this.password = entity.getPassword();
+        this.pw = entity.getPw();
         this.firstName = entity.getFirstName();
         this.lastName = entity.getLastName();
         this.SSN = entity.getSSN();

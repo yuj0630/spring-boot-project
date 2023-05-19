@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class HikerSaveRequestDto {
     private String id;
 
-    private String password;
+    private String pw;
 
     private String firstName;
 
@@ -31,7 +31,7 @@ public class HikerSaveRequestDto {
     public Hiker toEntity(){
         return Hiker.builder()
                 .id(id)
-                .password(password)
+                .pw(pw)
                 .firstName(firstName)
                 .lastName(lastName)
                 .SSN(SSN)

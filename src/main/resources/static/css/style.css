@@ -2,11 +2,11 @@
   background-color: black;
   color: white;
 }
-​
+
 .navigation {
     background-color: blue;
 }
-​
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -33,7 +33,7 @@ img {
     font-size: 10pt;
     padding: 10px 25px;
 }
-​
+
 .btn-theme:hover {
     background: #494949;
 }
@@ -43,7 +43,7 @@ img {
 }
 .social,
 .action {
-​
+
 }
 .social ul,
 .action ul {
@@ -62,13 +62,13 @@ img {
     transition: .2s all ease-in-out;
 
 }
-​
+
 .social ul li a:hover,
 .action ul li a:hover {
     color: #666;
 
 }
-​
+
 .header {
     min-height: 200px;
 }
@@ -127,7 +127,7 @@ form.navbar-form button {
     float: left;
     margin-left: 10px;
 }
-​
+
 .navigation {
     background: #40bea7;
 }
@@ -172,7 +172,7 @@ ul.dropdown-menu li a {
     color: #ffffff;
     text-transform: uppercase;
 }
-​
+
 .slider .item {
     height: 390px;
     background-size: contain;
@@ -180,7 +180,7 @@ ul.dropdown-menu li a {
     background-repeat: no-repeat;
     background-position: center;
 }
-​
+
 .carousel-caption {
     top: 10%;
     right: 5%;
@@ -219,7 +219,7 @@ ol.carousel-indicators li.active {
 .big-slider .carousel-caption {
     top: 25%;
 }
-​
+
 .banner {
     margin: 30px 0px;
 }
@@ -479,9 +479,9 @@ ol.carousel-indicators li.active {
     color: #fff;
     font-family: 'raleway', sans-serif;
 }
-​
-​
-​
+
+
+
 .short-description {
     margin: 20px 0px;
 }
@@ -520,7 +520,7 @@ ol.carousel-indicators li.active {
 .thumb-main-image img {
     width: 100%;
 }
-​
+
 h1.product-title {
     margin: 0px;
     padding: 0px;

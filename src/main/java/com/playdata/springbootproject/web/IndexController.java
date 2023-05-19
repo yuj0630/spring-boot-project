@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 @RequiredArgsConstructor
 @CrossOrigin
@@ -28,26 +27,14 @@ public class IndexController {
 
         return "index";// src/main/resources/templetes/ + "index" + .mustach
     }
-
-    @GetMapping("/posts/save")
-    public String savePost() {
-        return "posts-save";
-    }
-
-    @GetMapping("/posts/{id}")
-    public String postsUpdate(Model model, @PathVariable Long id) {
-        model.addAttribute("post", postsService.findById(id));
-        return "posts-update";
-    }
-
     @GetMapping("/sign")
     public String sign() {
         return "sign";
     }
 
-    @GetMapping("/post")
-    public String post() {
-        return "post";
+    @GetMapping("/blogs")
+    public String blogs() {
+        return "blogs";
     }
 
     @GetMapping("/MyPage")
@@ -58,11 +45,6 @@ public class IndexController {
     @GetMapping("/login")
     public String login() {
         return "login";
-    }
-
-    @GetMapping("/search")
-    public String search() {
-        return "search";
     }
 
     @GetMapping("/news")
@@ -90,4 +72,18 @@ public class IndexController {
         return "MyPage-update";
     }
 
+    @GetMapping("/MyPage/myPosts")
+    public String MyPagemyPosts() {
+        return "MyPage-myPosts";
+    }
+
+    @GetMapping("/blogs/save")
+    public String blogsave() {
+        return "blogs-save";
+    }
+
+    @GetMapping("/blogs/update")
+    public String blogupdate() {
+        return "blogs-update";
+    }
 }

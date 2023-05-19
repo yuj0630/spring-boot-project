@@ -26,7 +26,7 @@ public class HikerService {
     public String update(String id, HikerSaveRequestDto requestDto) {
         Hiker hiker = hikerRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id=" + id));
-        hiker.update(requestDto.getId(), requestDto.getPassword());
+        hiker.update(requestDto.getId(), requestDto.getPw());
 
         return id;
     }

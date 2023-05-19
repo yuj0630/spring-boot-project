@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mountain-Dew</title>
+<title>Mountain-Duo</title>
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 <script src="https://kit.fontawesome.com/fb139b7f2d.js" crossorigin="anonymous"></script>
 <body>
@@ -16,7 +16,7 @@
     <nav>
         <div class="left-menu">
             <ul>
-                <li><a href="/"><i class="fa-solid fa-mountain-sun">&nbsp Moutain Dew</i></li>
+                <li><a href="/"><i class="fa-solid fa-mountain-sun">&nbsp Moutain Duo</i></a></li>
             </ul>
         </div>
         <div class="right-menu">
@@ -29,8 +29,8 @@
     <nav class="option">
         <div >
             <ul>
-                <li><a href="/search">등산로 찾기</a></li>
-                <li><a href="/post">블로그</a></li>
+                <li><a href="/pmntn">등산로 찾기</a></li>
+                <li><a href="/blogs">블로그</a></li>
                 <li><a href="/news">News</a></li>
                 <li><a href="/MyPage">My Page</a></li>
             </ul>
@@ -60,22 +60,36 @@
                                 <div class="form-group">
                                     <form class="signup" action="#" method="post">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First & Last Name">
+                                            <label for="inputEmail4">ID</label>
+                                            <input type="text" class="form-control" id="id" name="id" placeholder="아이디" style="width: 200px;">
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="un3561@naver.com">
+                                            <label for="inputPassword4">PASSWORD</label>
+                                            <input type="password" class="form-control" id="pw" name="pw" placeholder="비밀번호"style="width: 200px;">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="SSN">
+                                            <label for="inputAddress">이름</label>
+                                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="이름" style="width: 150px;">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="age">
+                                            <label for="inputAddress">성</label>
+                                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="성" style="width: 150px;">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="sex">
+                                            <label for="inputPassword4">주민번호</label>
+                                            <input type="text" class="form-control" id="ssn" name="ssn" placeholder="000000-0000000" style="width: 200px;">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="phone">
+                                            <label for="inputPassword4">나이</label>
+                                            <input type="text" class="form-control" id="age" name="age" placeholder="나이" style="width: 200px;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword4">성별</label>
+                                            <input type="text" class="form-control" id="sex" name="sex" placeholder="남/여" style="width: 200px;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword4">전화번호</label>
+                                            <input type="text" class="form-control" id="phone" name="phone" placeholder="010-0000-0000" style="width: 200px;">
                                         </div>
                                     </form>
                                 </div>

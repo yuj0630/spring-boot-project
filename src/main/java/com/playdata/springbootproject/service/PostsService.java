@@ -2,56 +2,62 @@ package com.playdata.springbootproject.service;
 
 import com.playdata.springbootproject.domain.post.Posts;
 import com.playdata.springbootproject.domain.post.PostsRepository;
-import com.playdata.springbootproject.web.Dto.PostsListResponseDto;
 import com.playdata.springbootproject.web.Dto.PostsResponseDto;
+import com.playdata.springbootproject.web.Dto.PostsListRequestDto;
 import com.playdata.springbootproject.web.Dto.PostsSaveRequestDto;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
-
 public class PostsService {
-    private final PostsRepository postRepository;
+    private final PostsRepository postsRepository;
 
-    @Transactional
     public Long save(PostsSaveRequestDto requestDto) {
-        return postRepository.save(requestDto.toEntity()).getId();
+
+        return postsRepository.save(requestDto.toEntity()).getId();
     }
 
-    @Transactional
+    @Transactional // 두 개의 작업이 동시에 일어나야 한다
     public Long update(Long id, PostsSaveRequestDto requestDto) {
-        Posts posts = postRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id=" + id));
-        posts.update(requestDto.getTitle(), requestDto.getContent());
-
+        Posts posts = postsRepository.findById(id)
+                .orElseThrow(()->new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id=" +id));
+        posts.update(requestDto.getTitle(), requestDto.getContent(), requestDto.getClimbing_mountain(), requestDto.getClimbing_date());
         return id;
     }
-    @Transactional
-    public PostsResponseDto findById(Long id) {
-        Posts posts = postRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("해당 게시글을 찾을 수 없습니다."));
 
+    public PostsResponseDto findById(Long id) {
+        Posts posts =postsRepository.findById(id)
+                .orElseThrow(()->new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id=" +id));
         return new PostsResponseDto(posts);
     }
 
-    @Transactional
-    public List<PostsListResponseDto> findAllDesc() {
-        return postRepository.findAllDesc().stream()
-                .map(PostsListResponseDto::new)
+    @Transactional(readOnly = true)
+    public List<PostsListRequestDto> findAllDesc() {
+        return postsRepository.findAllDesc().stream()
+                .map(PostsListRequestDto::new)
                 .collect(Collectors.toList());
     }
 
-    @Transactional
-    public void delete(Long id){
-        Posts posts = postRepository.findById(id)
-                .orElseThrow(()-> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id));
-        postRepository.delete(posts);
+    public List<PostsResponseDto> findByClimbingMountain(String climbing_mountain) {
+        List<Posts> posts = postsRepository.findByClimbingMountain(climbing_mountain);
+
+        return posts.stream()
+                .map(PostsResponseDto::new)
+                .collect(Collectors.toList());
     }
 
+
+    @Transactional
+    public Long delete(Long id) {
+        Posts posts = postsRepository.findById(id)
+                .orElseThrow(()-> new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id= " + id));
+        postsRepository.delete(posts);
+        return id;
+    }
 
 }

@@ -7,17 +7,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
-@RequestMapping("/MyPage")
+@RequestMapping
 @RestController
 public class HikerController {
     private final HikerService hikerService;
 
-    @PostMapping("/myPosts")
+    @PostMapping("/Register")
     public String save(@RequestBody HikerSaveRequestDto requestDto) {
         return hikerService.save(requestDto);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/MyPage/update")
     public String update(@PathVariable String id, @RequestBody HikerSaveRequestDto requestDto) {
         hikerService.update(id, requestDto);
         return "회원 정보가 수정되었습니다.";
@@ -28,7 +28,7 @@ public class HikerController {
         return hikerService.findById(id);
     }
 
-    @DeleteMapping("/Delete")
+    @DeleteMapping("/MyPage/Delete")
     public String delete(@PathVariable String id) {
         hikerService.delete(id);
         return "회원 탈퇴가 완료되었습니다.";

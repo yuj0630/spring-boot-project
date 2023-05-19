@@ -16,7 +16,7 @@ public class Hiker extends AuditingEntity {
     private String id;
 
     @Column(length = 20, nullable = false)
-    private String password;
+    private String pw;
 
     @Column(length = 20, nullable = false)
     private String firstName;
@@ -34,9 +34,9 @@ public class Hiker extends AuditingEntity {
     private String phone;
 
     @Builder
-    public Hiker(String id, String password, String firstName, String lastName, String SSN, int age, String sex, String phone) {
+    public Hiker(String id, String pw, String firstName, String lastName, String SSN, int age, String sex, String phone) {
         this.id = id;
-        this.password = password;
+        this.pw = pw;
         this.firstName = firstName;
         this.lastName = lastName;
         this.SSN = SSN;
@@ -45,9 +45,9 @@ public class Hiker extends AuditingEntity {
         this.phone = phone;
     }
 
-    public void update(String id, String password){
+    public void update(String id, String pw){
         this.id = id;
-        this.password = password;
+        this.pw = pw;
     }
 
 }

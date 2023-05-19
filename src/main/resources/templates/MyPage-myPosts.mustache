@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mountain-Dew</title>
+<title>Mountain-Duo</title>
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 <script src="https://kit.fontawesome.com/fb139b7f2d.js" crossorigin="anonymous"></script>
 <body>
@@ -16,7 +16,7 @@
     <nav>
         <div class="left-menu">
             <ul>
-                <li><a href="/"><i class="fa-solid fa-mountain-sun">&nbsp Moutain Dew</i></a></li>
+                <li><a href="/"><i class="fa-solid fa-mountain-sun">&nbsp Moutain Duo</i></a></li>
             </ul>
         </div>
         <div class="right-menu">
@@ -29,8 +29,8 @@
     <nav class="option">
         <div >
             <ul>
-                <li><a href="/search">등산로 찾기</a></li>
-                <li><a href="/post">블로그</a></li>
+                <li><a href="/pmntn">등산로 찾기</a></li>
+                <li><a href="/blogs">블로그</a></li>
                 <li><a href="/news">News</a></li>
                 <li><a href="/MyPage">My Page</a></li>
             </ul>
@@ -38,22 +38,67 @@
     </nav>
 </header>
 
-
-<div class="form-group">
-    성 : <input type="text" class="form-control" placeholder="firstName">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="list-unstyled">
+                <li><a href="/MyPage" class="list-group-item"><i class="fa fa-angle-double-right"></i> 내 정보</a> </li>
+                <li><a href="/MyPage/myPosts" class="list-group-item"><i class="fa fa-angle-double-right"></i> 내 게시글 </a> </li>
+                <li><a href="/MyPage/update" class="list-group-item"><i class="fa fa-angle-double-right"></i> 정보 변경 </a> </li>
+                <li><a href="/MyPage/Setting" class="list-group-item"><i class="fa fa-angle-double-right"></i> 환경설정 </a> </li>
+                <li><a href="/MyPage/QA" class="list-group-item"><i class="fa fa-angle-double-right"></i> Q/A </a> </li>
+                <li><a href="/MyPage/Delete" class="list-group-item"><i class="fa fa-angle-double-right"></i> 회원 탈퇴 </a> </li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-9 ">
+                                <div class="form-group">
+                                    <form class="signup" action="#" method="post">
+                                        <div class="form-group">
+                                            <label for="inputEmail4">ID</label>
+                                            <input type="text" class="form-control" id="id" name="id" placeholder="아이디" style="width: 200px;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword4">PASSWORD</label>
+                                            <input type="password" class="form-control" id="pw" name="pw" placeholder="비밀번호"style="width: 200px;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress">이름</label>
+                                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="이름" style="width: 150px;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress">성</label>
+                                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="성" style="width: 150px;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword4">주민번호</label>
+                                            <input type="text" class="form-control" id="ssn" name="ssn" placeholder="000000-0000000" style="width: 200px;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword4">나이</label>
+                                            <input type="text" class="form-control" id="age" name="age" placeholder="나이" style="width: 200px;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword4">성별</label>
+                                            <input type="text" class="form-control" id="sex" name="sex" placeholder="남/여" style="width: 200px;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword4">전화번호</label>
+                                            <input type="text" class="form-control" id="phone" name="phone" placeholder="010-0000-0000" style="width: 200px;">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="form-group">
-    이름 : <input type="email" class="form-control" placeholder="lastName">
-</div>
-<div class="form-group">
-    주민등록번호 : <input type="text" class="form-control" placeholder="SSN">
-</div>
-<div class="form-group">
-    나이 : <input type="text" class="form-control" placeholder="age">
-</div>
-<div class="form-group">
-    성별 : <input type="text" class="form-control" placeholder="sex">
-</div>
-<div class="form-group">
-    전화번호 : <input type="text" class="form-control" placeholder="phone">
-</div>
+{{>layout/footer}}
