@@ -14,8 +14,8 @@
 
 ## Stack
 - IDE : vscode, pycharm
-- frontend : html, css, javascript
-- backend : django, node.js
+- frontend : html, css, javascript, mustache
+- backend : django, node.js, Spring boot, lombok & thymeleaf
 - DB : mysql, postgresql
 - tool : wix, miro
 
@@ -26,3 +26,4 @@
 - 블로그, 뉴스 기능
 - mypage로 정보 확인 기능
 - main-page에 글귀 생성, 추후 추천순 정렬 기능
+- 아이디 찾기, 비밀번호 찾기 기능
